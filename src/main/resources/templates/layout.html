@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="site-head">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../public/css/styles.css" th:href="@{/css/styles.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <meta th:include="this :: head" th:remove="tag"/>
+</head>
+
+<body>
+<header th:fragment="site-header" th:remove="tag">
+    <header>
+<div id="menu">
+        <a href="home.html" th:href="@{/}">Home</a>
+        <a href="login.html" th:href="@{/login}">Login</a>
+        <a href="register.html" th:href="@{/register}">Register</a>
+</div>
+        <div id="logged-in-info">
+            <span>Hello, <b>(user)</b></span>
+            <form method="post" th:action="@{/}">
+                <input type="submit" value="Logout"/>
+            </form>
+        </div>
+    </header>
+
+
+</header>
+
+
+<h1>Welcome</h1>
+<p>Welcome to HospitalProject.</p>
+
+<footer th:fragment="site-footer">
+    Spring project 2016
+</footer>
+</body>
+
+</html>
