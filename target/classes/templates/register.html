@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
     <meta charset="UTF-8"/>
     <title>Register</title>
 </head>
 <body>
+<header th:replace="layout :: site-header">
+    <link rel="stylesheet" href="../public/css/styles.css" th:href="@{/css/styles.css}" />
+</header>
 <h2>Who are you?</h2>
 <div>
     <a href="/docreg"><input type="button" value="Doctor"/></a>
     <a href="/pacreg"><input type="button" value="Pacient"/></a>
 
 </div>
+<footer th:replace="layout :: site-footer" />
 </body>
 </html>

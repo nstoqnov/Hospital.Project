@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: site-head">
     <meta charset="UTF-8"/>
     <title>Login</title>
 </head>
 <body>
+<header th:replace="layout :: site-header">
+
+</header>
 <div>
     Username:
     <input type="text"/>
@@ -13,5 +16,6 @@
 <input type="password"/></div>
 <input type="button" value="Login"/>
 <a href="register.html"> Go to register...</a>
+<footer th:replace="layout :: site-footer" />
 </body>
 </html>
